@@ -2,6 +2,9 @@
 #include "esphome/core/log.h"
 #include "esphome/core/version.h"
 
+#define USE_ESP32 = 1
+#define USE_SENSOR = 1
+
 #if defined(USE_ESP32) || defined(USE_NRF52)
 
 #include <cstring>
