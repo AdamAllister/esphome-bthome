@@ -73,12 +73,12 @@ struct BinarySensorMeasurement {
 };
 #endif
 
-#if defined(USE_ESP32) && #if ESPHOME_VERSION_CODE >= VERSION_CODE(2026, 4, 0) && defined(USE_BTHOME_BLUEDROID)
+#if defined(USE_ESP32) && ESPHOME_VERSION_CODE >= VERSION_CODE(2026, 4, 0) && defined(USE_BTHOME_BLUEDROID)
   using namespace esp32_ble;
 #endif
 
 
-#if defined(USE_ESP32) && #if ESPHOME_VERSION_CODE >= VERSION_CODE(2026, 4, 0)
+#if defined(USE_ESP32) && ESPHOME_VERSION_CODE < VERSION_CODE(2026, 4, 0)
 class BTHome : public Component, public GAPEventHandler, public Parented<ESP32BLE> {
 #else
 class BTHome : public Component {
