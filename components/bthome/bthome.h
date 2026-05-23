@@ -115,7 +115,8 @@ class BTHome : public Component {
 #endif
 
 #if defined(USE_ESP32) && defined(USE_BTHOME_BLUEDROID)
-  void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) #if ESPHOME_VERSION_CODE < VERSION_CODE(2026, 4, 0)
+  void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) 
+#if ESPHOME_VERSION_CODE < VERSION_CODE(2026, 4, 0)
     override
 #endif
   ;
